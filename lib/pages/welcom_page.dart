@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:waiting_list/pages/login.dart';
 import 'package:waiting_list/pages/welcom_page2.dart';
-import 'package:waiting_list/pages/welcome_carousel.dart';
+// import 'package:waiting_list/pages/welcome_carousel.dart';
 // import 'package:waiting_list/pages/login.dart';
 // import 'package:carousel_slider/carousel_slider.dart';
 // import 'package:navigation/pages/login.dart';
@@ -72,6 +72,36 @@ class WelcomePage extends StatelessWidget {
                   ),
                 ]),
           ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                width: 10,
+                height: 10,
+                decoration: ShapeDecoration(
+                  color: Color(0xFFDA1F2B),
+                  shape: OvalBorder(),
+                ),
+              ),
+              Container(
+                width: 10,
+                height: 10,
+                decoration: ShapeDecoration(
+                  color: Color(0xFFD9D9D9),
+                  shape: OvalBorder(),
+                ),
+              ),
+              Container(
+                width: 10,
+                height: 10,
+                decoration: ShapeDecoration(
+                  color: Color(0xFFD9D9D9),
+                  shape: OvalBorder(),
+                ),
+              ),
+            ],
+          ),
+
           Container(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,

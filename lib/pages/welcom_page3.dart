@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:waiting_list/pages/login.dart';
-import 'package:waiting_list/pages/welcom_page2.dart';
+// import 'package:waiting_list/pages/welcom_page2.dart';
 // import 'package:waiting_list/pages/welcome_carousel.dart';
 // import 'package:waiting_list/pages/login.dart';
 // import 'package:carousel_slider/carousel_slider.dart';
@@ -46,7 +46,7 @@ class WelcomePage3 extends StatelessWidget {
                 children: [
                   // MyCarousel(),
                   Text(
-                    'Explore the World of Food Trucks',
+                    'Taste, Share, Repeat',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Color(0xFF222222),
@@ -60,7 +60,7 @@ class WelcomePage3 extends StatelessWidget {
                     height: 10,
                   ),
                   Text(
-                    'We’ll guide you to the top food trucks in your area. Uncover diverse flavors using your location for a personalized experience.',
+                    'Savor delicious bites, explore menus, and share your experiences through reviews.',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Color(0xFF222222),

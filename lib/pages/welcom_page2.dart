@@ -45,7 +45,7 @@ class WelcomePage2 extends StatelessWidget {
                 children: [
                   // MyCarousel(),
                   Text(
-                    'Explore the World of Food Trucks',
+                    'Join Virtual Waitlists with Ease',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Color(0xFF222222),
@@ -59,7 +59,7 @@ class WelcomePage2 extends StatelessWidget {
                     height: 10,
                   ),
                   Text(
-                    'We’ll guide you to the top food trucks in your area. Uncover diverse flavors using your location for a personalized experience.',
+                    'Experience the ease of joining waitlists and receive instant, real-time updates. Your lunch breaks just got a whole lot smoother.',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Color(0xFF222222),

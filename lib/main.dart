@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 // import 'package:navigation/welcome_page.dart';
 import 'package:waiting_list/pages/welcom_page.dart';
+// import 'package:waiting_list/pages/login.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
       ),
       home: const WelcomePage(),
 
+      // home: const Login(),
       // MyHomePage(title: 'Welcome to Waiting List App'),
     );
   }
