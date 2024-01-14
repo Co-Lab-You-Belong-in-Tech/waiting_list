@@ -1,7 +1,7 @@
 class TruckModel {
   String name;
   String imagePath;
-  String level;
+  String price;
   String cusine;
   String calorie;
   bool viewIsSelected;
@@ -9,7 +9,7 @@ class TruckModel {
   TruckModel({
     required this.name,
     required this.imagePath,
-    required this.level,
+    required this.price,
     required this.cusine,
     required this.calorie,
     required this.viewIsSelected,
@@ -21,8 +21,9 @@ class TruckModel {
     trucks.add(
       TruckModel(
           name: 'Dos Tacos',
-          imagePath: 'assets/images/grilledcheese.jpg',
-          level: 'easy',
+          imagePath:
+              'https://images.unsplash.com/photo-1565123409695-7b5ef63a2efb?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+          price: 'easy',
           cusine: 'Mexican',
           calorie: '4.5',
           viewIsSelected: false),
@@ -31,8 +32,9 @@ class TruckModel {
     trucks.add(
       TruckModel(
           name: 'Tacos Locos',
-          imagePath: 'assets/images/sushi.jpg',
-          level: 'easy',
+          imagePath:
+              'https://images.unsplash.com/photo-1611250188496-e966043a0629?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+          price: 'easy',
           cusine: 'Mexican',
           calorie: '230kCal',
           viewIsSelected: false),
@@ -40,8 +42,9 @@ class TruckModel {
     trucks.add(
       TruckModel(
           name: 'The Burger Bus',
-          imagePath: 'assets/images/pizza.jpg',
-          level: 'easy',
+          imagePath:
+              'https://images.unsplash.com/photo-1596649299486-4cdea56fd59d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+          price: 'easy',
           cusine: 'American',
           calorie: '230kCal',
           viewIsSelected: false),
@@ -49,8 +52,9 @@ class TruckModel {
     trucks.add(
       TruckModel(
           name: 'I Love Acai',
-          imagePath: 'assets/images/pizza.jpg',
-          level: 'easy',
+          imagePath:
+              'https://images.unsplash.com/photo-1509315811345-672d83ef2fbc?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+          price: 'easy',
           cusine: 'Smoothies',
           calorie: '230kCal',
           viewIsSelected: false),

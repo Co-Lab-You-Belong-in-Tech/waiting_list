@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:foodapp/models/truck_model.dart';
-import 'package:foodapp/models/feature_model.dart';
-import 'package:foodapp/models/foodtruck_model.dart';
+import 'package:waiting_list/models/truck_model.dart';
+import 'package:waiting_list/models/feature_model.dart';
+import 'package:waiting_list/models/foodtruck_model.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({super.key});
@@ -92,10 +92,13 @@ class HomePage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(20)),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [Image(
-                     image: NetworkImage(feature_model.imagePath);,
-
-                  )
+                  children: [
+                    Image(
+                      image: NetworkImage(feats[index].imagePath),
+                      height: 188,
+                      width: 278,
+                      fit: BoxFit.cover,
+                    ),
                     // const Icon(Icons.ac_unit_sharp),
                     Column(
                       children: [
@@ -110,15 +113,15 @@ class HomePage extends StatelessWidget {
                       ],
                     ),
                     Text(
-                      '${feats[index].level} | ${feats[index].cusine} | ${feats[index].calorie}',
+                      '${feats[index].price} | ${feats[index].cusine} | ${feats[index].calorie}',
                       style: const TextStyle(
                           color: Color.fromARGB(255, 8, 8, 8),
-                          fontSize: 13,
+                          fontSize: 14,
                           fontWeight: FontWeight.w400),
                     ),
                     Container(
-                      height: 45,
-                      width: 230,
+                      height: 34,
+                      width: 278,
                       decoration: BoxDecoration(
                           gradient: const LinearGradient(colors: [
                             Color.fromARGB(255, 219, 29, 29),
@@ -180,9 +183,12 @@ class HomePage extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    const Image(
-                        image: NetworkImage(
-                            'https://images.unsplash.com/photo-1612208176815-e132bcf971b0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')),
+                    Image(
+                      image: NetworkImage(foodTrucks[index].imagePath),
+                      height: 188,
+                      width: 278,
+                      fit: BoxFit.cover,
+                    ),
                     // const Icon(Icons.ac_unit_sharp),
                     Column(
                       children: [
@@ -197,15 +203,15 @@ class HomePage extends StatelessWidget {
                       ],
                     ),
                     Text(
-                      '${foodTrucks[index].level} | ${foodTrucks[index].cusine} | ${foodTrucks[index].calorie}',
+                      '${foodTrucks[index].price} | ${foodTrucks[index].cusine} | ${foodTrucks[index].calorie}',
                       style: const TextStyle(
                           color: Color.fromARGB(255, 8, 8, 8),
                           fontSize: 13,
                           fontWeight: FontWeight.w400),
                     ),
                     Container(
-                      height: 45,
-                      width: 230,
+                      height: 34,
+                      width: 278,
                       decoration: BoxDecoration(
                           gradient: const LinearGradient(colors: [
                             Color.fromARGB(255, 219, 29, 29),
@@ -267,9 +273,11 @@ class HomePage extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    const Image(
-                      image: NetworkImage(
-                          'https://images.unsplash.com/photo-1565123409695-7b5ef63a2efb?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'),
+                    Image(
+                      image: NetworkImage(trucks[index].imagePath),
+                      height: 188,
+                      width: 278,
+                      fit: BoxFit.cover,
                     ),
                     // const Icon(Icons.ac_unit_sharp),
                     Column(
@@ -285,15 +293,15 @@ class HomePage extends StatelessWidget {
                       ],
                     ),
                     Text(
-                      '${trucks[index].level} | ${trucks[index].cusine} | ${trucks[index].calorie}',
+                      '${trucks[index].price} | ${trucks[index].cusine} | ${trucks[index].calorie}',
                       style: const TextStyle(
                           color: Color.fromARGB(255, 8, 8, 8),
                           fontSize: 13,
                           fontWeight: FontWeight.w400),
                     ),
                     Container(
-                      height: 45,
-                      width: 230,
+                      height: 34,
+                      width: 278,
                       decoration: BoxDecoration(
                           gradient: const LinearGradient(colors: [
                             Color.fromARGB(255, 219, 29, 29),
