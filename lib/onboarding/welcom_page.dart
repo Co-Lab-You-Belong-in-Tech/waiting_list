@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:waiting_list/pages/welcome_carousel.dart';
+import 'package:waiting_list/pages/login.dart';
+import 'package:waiting_list/pages/welcom_page2.dart';
+import 'package:waiting_list/unused/welcome_carousel.dart';
 // import 'package:waiting_list/pages/login.dart';
 // import 'package:carousel_slider/carousel_slider.dart';
 // import 'package:navigation/pages/login.dart';
@@ -36,7 +38,7 @@ class WelcomePage extends StatelessWidget {
           // return:
           Container(
             margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-            height: 150,
+            height: 90,
             width: 220,
             child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -72,11 +74,16 @@ class WelcomePage extends StatelessWidget {
           ),
           Container(
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               // crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Login()),
+                      );
+                    },
                     child: Text(
                       'SKIP',
                       style: TextStyle(
@@ -89,7 +96,13 @@ class WelcomePage extends StatelessWidget {
                       ),
                     )),
                 ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => WelcomePage2()),
+                      );
+                      //
+                    },
                     child: Text(
                       'NEXT',
                       style: TextStyle(
