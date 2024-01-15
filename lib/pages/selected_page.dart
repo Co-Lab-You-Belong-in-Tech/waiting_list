@@ -1,12 +1,20 @@
 import 'package:flutter/material.dart';
 
 import '../widgets/bottom_navbar.dart';
+import '../widgets/small_red_eclipse.dart';
 
-class SelectedPage extends StatelessWidget {
+class SelectedPage extends StatefulWidget {
   const SelectedPage({super.key});
 
   @override
+  State<SelectedPage> createState() => _SelectedPageState();
+}
+
+class _SelectedPageState extends State<SelectedPage> {
+  // Size _size;
+  @override
   Widget build(BuildContext context) {
+    Size _size = MediaQuery.of(context).size;
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -14,16 +22,132 @@ class SelectedPage extends StatelessWidget {
             Stack(
               children: [
                 Container(
-                  width: double.infinity,
-                  height: 200,
+                  width: _size.width,
+                  height: 230,
                   decoration: BoxDecoration(
-                      image:
-                          DecorationImage(image: AssetImage("images/bus.png"))),
-                )
+                      image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image: AssetImage("images/pizza.jpg"))),
+                ),
+                Positioned(
+                    right: 25,
+                    top: 10,
+                    child: Container(
+                      height: 35,
+                      width: 35,
+                      decoration: BoxDecoration(
+                          color: Colors.white, shape: BoxShape.circle),
+                    )),
+                Positioned(
+                  right: 30,
+                  top: 15,
+                  child: Container(
+                    child: Icon(
+                      Icons.favorite_outline_rounded,
+                      size: 25,
+                      color: Colors.black,
+                    ),
+                  ),
+                ),
+                Positioned(
+                    right: 80,
+                    top: 10,
+                    child: Container(
+                      height: 35,
+                      width: 35,
+                      decoration: BoxDecoration(
+                          color: Colors.white, shape: BoxShape.circle),
+                    )),
+                Positioned(
+                  right: 85,
+                  top: 15,
+                  child: Container(
+                    child: Icon(
+                      Icons.file_upload_outlined,
+                      size: 25,
+                      color: Colors.black,
+                    ),
+                  ),
+                ),
+                Positioned(
+                    left: 25,
+                    top: 10,
+                    child: Container(
+                      height: 35,
+                      width: 35,
+                      decoration: BoxDecoration(
+                          color: Colors.white, shape: BoxShape.circle),
+                    )),
+                Positioned(
+                  left: 32,
+                  top: 20,
+                  child: Container(
+                    child: Icon(
+                      Icons.arrow_back_ios_rounded,
+                      size: 17,
+                      color: Colors.black,
+                    ),
+                  ),
+                ),
+                Positioned(
+                    bottom: 10,
+                    right: 20,
+                    child: Container(
+                      height: 20,
+                      width: 40,
+                      decoration: BoxDecoration(
+                          color: Colors.blueGrey,
+                          borderRadius: BorderRadius.circular(5)),
+                      child: Text(
+                        " 1/66",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, color: Colors.white),
+                      ),
+                    ))
               ],
             ),
-            Text("HELP"),
-            BottomNavBar()
+            Container(
+              margin: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
+              child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Toasty Cheese Food Truck",
+                      style: TextStyle(
+                        fontWeight: FontWeight.w700,
+                        fontSize: 20,
+                      ),
+                    ),
+                    SizedBox(height: 10),
+                    Row(
+                      children: [
+                        Text("\$\$ "),
+                        SmallRedEclipse(),
+                        Text(" American "),
+                        SmallRedEclipse(),
+                        Icon(Icons.star_outline_sharp),
+                        Text(" 4.4 "),
+                        SmallRedEclipse(),
+                        Text(
+                          " 410 reviews ",
+                          style:
+                              TextStyle(decoration: TextDecoration.underline),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Text("W 17th Street Chiicago, IL "),
+                        Icon(Icons.location_on_outlined),
+                        Text(" 400ft away ")
+                      ],
+                    )
+                  ]),
+            )
+            // everything after Stack
+
+            // BottomNavBar()
           ],
         ),
       ),
