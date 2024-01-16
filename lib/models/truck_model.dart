@@ -3,7 +3,7 @@ class TruckModel {
   String imagePath;
   String price;
   String cusine;
-  String calorie;
+  String rating;
   bool viewIsSelected;
 
   TruckModel({
@@ -11,7 +11,7 @@ class TruckModel {
     required this.imagePath,
     required this.price,
     required this.cusine,
-    required this.calorie,
+    required this.rating,
     required this.viewIsSelected,
   });
 
@@ -25,7 +25,7 @@ class TruckModel {
               'https://images.unsplash.com/photo-1565123409695-7b5ef63a2efb?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
           price: 'easy',
           cusine: 'Mexican',
-          calorie: '4.5',
+          rating: '4.5',
           viewIsSelected: false),
     );
 
@@ -36,7 +36,7 @@ class TruckModel {
               'https://images.unsplash.com/photo-1611250188496-e966043a0629?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
           price: 'easy',
           cusine: 'Mexican',
-          calorie: '230kCal',
+          rating: '4.5',
           viewIsSelected: false),
     );
     trucks.add(
@@ -46,7 +46,7 @@ class TruckModel {
               'https://images.unsplash.com/photo-1596649299486-4cdea56fd59d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
           price: 'easy',
           cusine: 'American',
-          calorie: '230kCal',
+          rating: '4.1',
           viewIsSelected: false),
     );
     trucks.add(
@@ -56,7 +56,7 @@ class TruckModel {
               'https://images.unsplash.com/photo-1509315811345-672d83ef2fbc?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
           price: 'easy',
           cusine: 'Smoothies',
-          calorie: '230kCal',
+          rating: '4.8',
           viewIsSelected: false),
     );
 

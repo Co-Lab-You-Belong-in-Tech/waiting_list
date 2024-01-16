@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:waiting_list/models/truck_model.dart';
 import 'package:waiting_list/models/feature_model.dart';
 import 'package:waiting_list/models/foodtruck_model.dart';
+import 'package:waiting_list/pages/explore_near.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({super.key});
@@ -75,13 +76,14 @@ class HomePage extends StatelessWidget {
             style: TextStyle(
                 color: Colors.black, fontSize: 18, fontWeight: FontWeight.bold),
           ),
+          // OutlinedButton void (onPressed: () {}, child: Text('Click Here'),)
         ),
         const SizedBox(
           height: 15,
         ),
         SizedBox(
           // color: Colors.blue,
-          height: 240,
+          height: 320,
           child: ListView.separated(
             itemBuilder: (context, index) {
               return Container(
@@ -113,7 +115,7 @@ class HomePage extends StatelessWidget {
                       ],
                     ),
                     Text(
-                      '${feats[index].price} | ${feats[index].cusine} | ${feats[index].calorie}',
+                      '${feats[index].price} | ${feats[index].cusine} | ${feats[index].rating}',
                       style: const TextStyle(
                           color: Color.fromARGB(255, 8, 8, 8),
                           fontSize: 14,
@@ -203,7 +205,7 @@ class HomePage extends StatelessWidget {
                       ],
                     ),
                     Text(
-                      '${foodTrucks[index].price} | ${foodTrucks[index].cusine} | ${foodTrucks[index].calorie}',
+                      '${foodTrucks[index].price} | ${foodTrucks[index].cusine} | ${foodTrucks[index].rating}',
                       style: const TextStyle(
                           color: Color.fromARGB(255, 8, 8, 8),
                           fontSize: 13,
@@ -248,6 +250,15 @@ class HomePage extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        TextButton(
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => exploreNear()),
+            );
+          },
+          child: const Text('Explore All'),
+        ),
         const Padding(
           padding: EdgeInsets.only(left: 20),
           child: Text(
@@ -293,7 +304,7 @@ class HomePage extends StatelessWidget {
                       ],
                     ),
                     Text(
-                      '${trucks[index].price} | ${trucks[index].cusine} | ${trucks[index].calorie}',
+                      '${trucks[index].price} | ${trucks[index].cusine} | ${trucks[index].rating}',
                       style: const TextStyle(
                           color: Color.fromARGB(255, 8, 8, 8),
                           fontSize: 13,

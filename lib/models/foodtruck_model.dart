@@ -3,7 +3,7 @@ class FoodTruckModel {
   String imagePath;
   String price;
   String cusine;
-  String calorie;
+  String rating;
   bool viewIsSelected;
 
   FoodTruckModel({
@@ -11,7 +11,7 @@ class FoodTruckModel {
     required this.imagePath,
     required this.price,
     required this.cusine,
-    required this.calorie,
+    required this.rating,
     required this.viewIsSelected,
   });
 
@@ -25,7 +25,7 @@ class FoodTruckModel {
               'https://images.unsplash.com/photo-1612208176815-e132bcf971b0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
           price: 'cheap',
           cusine: 'Mexican',
-          calorie: '4.5',
+          rating: '4.7',
           viewIsSelected: false),
     );
 
@@ -35,8 +35,8 @@ class FoodTruckModel {
           imagePath:
               'https://images.unsplash.com/photo-1567129937968-cdad8f07e2f8?q=80&w=1949&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
           price: 'easy',
-          cusine: '20mins',
-          calorie: '230kCal',
+          cusine: 'Vietnamese',
+          rating: '4.5',
           viewIsSelected: false),
     );
     foodTrucks.add(
@@ -45,8 +45,8 @@ class FoodTruckModel {
           imagePath:
               'https://images.unsplash.com/photo-1620589125156-fd5028c5e05b?q=80&w=1787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
           price: 'easy',
-          cusine: '20mins',
-          calorie: '230kCal',
+          cusine: 'American',
+          rating: '4.2',
           viewIsSelected: false),
     );
     foodTrucks.add(
@@ -55,8 +55,8 @@ class FoodTruckModel {
           imagePath:
               'https://images.unsplash.com/photo-1572932759882-bb34c848d1b3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
           price: 'easy',
-          cusine: '20mins',
-          calorie: '230kCal',
+          cusine: 'Desserts',
+          rating: '4.6',
           viewIsSelected: false),
     );
 
