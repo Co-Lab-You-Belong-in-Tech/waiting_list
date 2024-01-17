@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-// import 'package:navigation/welcome_page.dart';
-// import 'package:waiting_list/pages/welcom_page.dart';
+import 'package:waiting_list/pages/home.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:waiting_list/pages/login.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -10,20 +11,18 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(fontFamily: 'nunito'),
+      home: HomePage(),
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      // home: const WelcomePage(),
-      home: const Login(), //
-
-      // MyHomePage(title: 'Welcome to Waiting List App'),
+        home: const Login(), //
     );
   }
 }
