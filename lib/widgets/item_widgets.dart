@@ -38,10 +38,11 @@ class ItemsWidget extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text("Don Tacos"),
-                      Icon(
-                        Icons.favorite_border_outlined,
-                        size: 16,
-                      ),
+                      for (int i = 0; i < 5; i++)
+                        Icon(
+                          Icons.favorite_border_outlined,
+                          size: 16,
+                        ),
                     ],
                   ),
                   Row(

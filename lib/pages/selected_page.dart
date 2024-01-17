@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:waiting_list/pages/locations.dart';
+import 'package:waiting_list/pages/menu.dart';
+import 'package:waiting_list/pages/tabs.dart';
 
 import '../widgets/bottom_navbar.dart';
 import '../widgets/small_red_eclipse.dart';
+import 'reviews.dart';
 
 class SelectedPage extends StatefulWidget {
   const SelectedPage({super.key});
@@ -106,6 +110,7 @@ class _SelectedPageState extends State<SelectedPage> {
                     ))
               ],
             ),
+            ReviewsTab(),
             Container(
               margin: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
               child: Column(
@@ -116,7 +121,7 @@ class _SelectedPageState extends State<SelectedPage> {
                       "Toasty Cheese Food Truck",
                       style: TextStyle(
                         fontWeight: FontWeight.w700,
-                        fontSize: 20,
+                        fontSize: 22,
                       ),
                     ),
                     SizedBox(height: 10),
@@ -130,7 +135,7 @@ class _SelectedPageState extends State<SelectedPage> {
                         Text(" 4.4 "),
                         SmallRedEclipse(),
                         Text(
-                          " 410 reviews ",
+                          "  410 reviews ",
                           style:
                               TextStyle(decoration: TextDecoration.underline),
                         ),
@@ -142,9 +147,17 @@ class _SelectedPageState extends State<SelectedPage> {
                         Icon(Icons.location_on_outlined),
                         Text(" 400ft away ")
                       ],
-                    )
+                    ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    TabTiles(),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    // MenuTab(),
                   ]),
-            )
+            ),
             // everything after Stack
 
             // BottomNavBar()
