@@ -67,7 +67,6 @@ class ReviewsTab extends StatelessWidget {
                 height: 10,
               ),
               Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   for (int i = 0; i < 6; i++)
                     Icon(
@@ -84,7 +83,28 @@ class ReviewsTab extends StatelessWidget {
                   "Very cheesy experience! This is a great place to enjoy a delicious sandwich.")
             ],
           ),
-        )
+        ),
+        const SizedBox(height: 15),
+        Container(
+          padding: const EdgeInsets.all(10),
+          // margin: EdgeInsets.symmetric(horizontal: 25),
+          decoration: BoxDecoration(
+              color: Color.fromARGB(255, 211, 21, 18),
+              borderRadius: BorderRadius.circular(6),
+              border: Border.all(
+                color: Colors.white,
+                // width: 25,
+              )),
+          child: const Center(
+            child: const Text(
+              "See All Reviews",
+              style: const TextStyle(
+                  color: Colors.white,
+                  // fontWeight: FontWeight.w700,
+                  fontSize: 14),
+            ),
+          ),
+        ),
       ]),
     );
   }

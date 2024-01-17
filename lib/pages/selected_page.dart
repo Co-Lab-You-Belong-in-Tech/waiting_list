@@ -135,7 +135,7 @@ class _SelectedPageState extends State<SelectedPage> {
                         Text(" 4.4 "),
                         SmallRedEclipse(),
                         Text(
-                          "  410 reviews ",
+                          " 410 reviews ",
                           style:
                               TextStyle(decoration: TextDecoration.underline),
                         ),
