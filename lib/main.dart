@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
-// import 'package:waiting_list/pages/confirmation.dart';
-import 'package:waiting_list/pages/home_page.dart';
-import 'package:waiting_list/pages/selected_page.dart';
-
-// import 'package:navigation/welcome_page.dart';
-// import 'package:waiting_list/onboarding/welcom_page.dart';
+import 'package:waiting_list/pages/home.dart';
+import 'package:google_fonts/google_fonts.dart';
 // import 'package:waiting_list/pages/login.dart';
 
 void main() {
@@ -14,22 +10,18 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(fontFamily: 'nunito'),
+      home: HomePage(),
       title: 'Speedy Bites',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.redAccent),
-        useMaterial3: true,
-      ),
-      // home: const WelcomePage(),
+      // theme: ThemeData(
+      //   colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+      //   useMaterial3: true,
+      // ),
       // home: const Login(), //
-      home: const SelectedPage(), //
-      // home: const Confirmation(), //
-
-      // MyHomePage(title: 'Welcome to Waiting List App'),
     );
   }
 }
