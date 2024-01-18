@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:waiting_list/pages/home.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:waiting_list/pages/login.dart';
+// import 'package:waiting_list/pages/login.dart';
 
 void main() {
   runApp(const MyApp());
