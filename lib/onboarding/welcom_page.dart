@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:waiting_list/pages/login.dart';
-import 'package:waiting_list/pages/welcom_page2.dart';
-// import 'package:waiting_list/pages/welcome_carousel.dart';
+import 'package:waiting_list/onboarding/welcom_page2.dart';
+// import 'package:waiting_list/unused/welcome_carousel.dart';
 // import 'package:waiting_list/pages/login.dart';
 // import 'package:carousel_slider/carousel_slider.dart';
 // import 'package:navigation/pages/login.dart';
 
-class WelcomePage3 extends StatelessWidget {
-  const WelcomePage3({super.key});
+class WelcomePage extends StatelessWidget {
+  const WelcomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Text("Speedy Bites III"),
+          title: Text("Speedy Bites"),
           backgroundColor: Colors.blue,
           leading: Icon(Icons.menu),
           actions: [
@@ -85,10 +85,29 @@ class WelcomePage3 extends StatelessWidget {
                       );
                     },
                     child: Text(
-                      'GET STARTED',
+                      'SKIP',
                       style: TextStyle(
                         color: Color(0xFFDA1F2B),
                         fontSize: 14,
+                        fontFamily: 'Nunito',
+                        fontWeight: FontWeight.w700,
+                        height: 0,
+                        letterSpacing: 0.50,
+                      ),
+                    )),
+                ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => WelcomePage2()),
+                      );
+                      //
+                    },
+                    child: Text(
+                      'NEXT',
+                      style: TextStyle(
+                        color: Colors.red,
+                        fontSize: 16,
                         fontFamily: 'Nunito',
                         fontWeight: FontWeight.w700,
                         height: 0,

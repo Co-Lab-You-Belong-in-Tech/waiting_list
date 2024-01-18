@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 // import 'package:waiting_list/pages/welcome_carousel.dart';
 import 'package:waiting_list/pages/login.dart';
-import 'package:waiting_list/pages/welcom_page3.dart';
+import 'package:waiting_list/onboarding/welcom_page3.dart';
 // import 'package:carousel_slider/carousel_slider.dart';
 // import 'package:navigation/pages/login.dart';
 
