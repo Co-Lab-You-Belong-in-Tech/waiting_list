@@ -27,7 +27,7 @@ class MenuTab extends StatelessWidget {
           ),
           Text(
             "American and cheddar cheese spread on Texas Toast. Serviced with Tomato Soup.",
-            style: TextStyle(fontSize: 10, fontWeight: FontWeight.w600),
+            style: TextStyle(fontSize: 10, fontWeight: FontWeight.normal),
           ),
           SizedBox(
             height: 15,
@@ -38,7 +38,7 @@ class MenuTab extends StatelessWidget {
           ),
           Text(
             "Mozzarella cheese, tomatoes, extra virgin olive oil, and fresh basil on sourdough.",
-            style: TextStyle(fontSize: 10, fontWeight: FontWeight.w600),
+            style: TextStyle(fontSize: 10, fontWeight: FontWeight.normal),
           ),
           SizedBox(
             height: 10,
@@ -49,7 +49,7 @@ class MenuTab extends StatelessWidget {
           ),
           Text(
             "American cheese, cheddar cheese spread and housemade macaroni and cheese on Texas Toast. ",
-            style: TextStyle(fontSize: 10, fontWeight: FontWeight.w600),
+            style: TextStyle(fontSize: 10, fontWeight: FontWeight.normal),
           ),
           SizedBox(
             height: 10,

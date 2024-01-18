@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:waiting_list/models/truck_model.dart';
+import 'package:waiting_list/pages/selected_page.dart';
 
 class exploreNear extends StatelessWidget {
   exploreNear({super.key});
@@ -102,22 +103,31 @@ class exploreNear extends StatelessWidget {
                           fontSize: 13,
                           fontWeight: FontWeight.w400),
                     ),
-                    Container(
-                      height: 48,
-                      width: 358,
-                      decoration: BoxDecoration(
-                          gradient: const LinearGradient(colors: [
-                            Color.fromARGB(255, 219, 29, 29),
-                            Color.fromARGB(255, 219, 29, 29),
-                          ]),
-                          borderRadius: BorderRadius.circular(10)),
-                      child: const Center(
-                        child: Text(
-                          'Join Waitlist',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.w600,
-                              fontSize: 14),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const SelectedPage()),
+                        );
+                      },
+                      child: Container(
+                        height: 48,
+                        width: 358,
+                        decoration: BoxDecoration(
+                            gradient: const LinearGradient(colors: [
+                              Color.fromARGB(255, 219, 29, 29),
+                              Color.fromARGB(255, 219, 29, 29),
+                            ]),
+                            borderRadius: BorderRadius.circular(10)),
+                        child: const Center(
+                          child: Text(
+                            'Join Waitlist',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.w600,
+                                fontSize: 14),
+                          ),
                         ),
                       ),
                     )

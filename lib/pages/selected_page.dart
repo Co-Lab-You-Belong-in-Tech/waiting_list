@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:waiting_list/pages/locations.dart';
 import 'package:waiting_list/pages/menu.dart';
 import 'package:waiting_list/pages/tabs.dart';
+import 'package:waiting_list/pages/waiting_status.dart';
 
 import '../widgets/bottom_navbar.dart';
 import '../widgets/small_red_eclipse.dart';
+import 'old_tab.dart';
 import 'reviews.dart';
 
 class SelectedPage extends StatefulWidget {
@@ -95,13 +97,13 @@ class _SelectedPageState extends State<SelectedPage> {
                 ),
                 Positioned(
                     bottom: 10,
-                    right: 20,
+                    right: 18,
                     child: Container(
                       height: 20,
                       width: 40,
                       decoration: BoxDecoration(
-                          color: Colors.blueGrey,
-                          borderRadius: BorderRadius.circular(5)),
+                          color: Color(0xff454138),
+                          borderRadius: BorderRadius.circular(3)),
                       child: Text(
                         " 1/66",
                         style: TextStyle(
@@ -110,7 +112,7 @@ class _SelectedPageState extends State<SelectedPage> {
                     ))
               ],
             ),
-            ReviewsTab(),
+            ////////end of stack
             Container(
               margin: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
               child: Column(
@@ -151,11 +153,29 @@ class _SelectedPageState extends State<SelectedPage> {
                     SizedBox(
                       height: 15,
                     ),
-                    TabTiles(),
+                    // Tabtiles(),
                     SizedBox(
                       height: 15,
                     ),
-                    // MenuTab(),
+                    oldTabTiles(),
+                    SizedBox(
+                      height: 10,
+                    ),
+
+                    WaitingStatusTab(),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    MenuTab(),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    ReviewsTab(),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    LocationsTab(),
+                    // Tabtiles(),
                   ]),
             ),
             // everything after Stack
