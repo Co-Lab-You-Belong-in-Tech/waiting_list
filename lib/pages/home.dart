@@ -4,9 +4,14 @@ import 'package:waiting_list/models/feature_model.dart';
 import 'package:waiting_list/models/foodtruck_model.dart';
 import 'package:waiting_list/pages/explore_near.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   HomePage({super.key});
 
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   List<TruckModel> trucks = [];
 
   void _getTruckInfo() {
