@@ -388,22 +388,9 @@ class _HomePageState extends State<HomePage> {
               color: Colors.white,
               borderRadius: BorderRadius.circular(10),
             ),
-            child: Stack(
-              children: [
-                ImageIcon(
-                  AssetImage("images/user_ellipse.png"),
-                  color: Color.fromARGB(255, 211, 21, 18),
-                ),
-                ImageIcon(
-                  AssetImage("images/User.png"),
-                  color: Colors.white,
-                ),
-              ],
+            child: const Icon(
+              Icons.access_time_rounded,
             ),
-            // child: const Icon(
-            //   // Icons.access_time_rounded,
-            //   Icons.access_time_rounded,
-            // ),
           ),
         ),
       ],

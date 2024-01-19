@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:waiting_list/pages/home.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:waiting_list/pages/selected_page.dart';
+
+import 'pages/confirmation.dart';
 // import 'package:waiting_list/pages/login.dart';
 
 void main() {
@@ -16,8 +18,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: 'nunito'),
-      // home: HomePage(),
-      home: SelectedPage(),
+      home: HomePage(),
+      // home: Confirmation(),
       title: 'Speedy Bites',
       // theme: ThemeData(
       //   colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
