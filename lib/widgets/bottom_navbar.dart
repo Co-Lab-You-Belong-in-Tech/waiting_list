@@ -27,12 +27,30 @@ class _BottomNavBarState extends State<BottomNavBar> {
       onTap: _NavigateBottomBar,
       type: BottomNavigationBarType.fixed,
       items: [
-        BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-        BottomNavigationBarItem(icon: Icon(Icons.search), label: "Search"),
         BottomNavigationBarItem(
-            icon: Icon(Icons.favorite_outline_rounded), label: "Favourites"),
+            icon: Icon(
+              Icons.home,
+              color: Colors.black,
+            ),
+            label: "Home"),
         BottomNavigationBarItem(
-            icon: Icon(Icons.notifications_sharp), label: "Updates"),
+            icon: Icon(
+              Icons.search,
+              color: Colors.black,
+            ),
+            label: "Search"),
+        BottomNavigationBarItem(
+            icon: Icon(
+              Icons.favorite_outline_rounded,
+              color: Colors.black,
+            ),
+            label: "Favourites"),
+        BottomNavigationBarItem(
+            icon: Icon(
+              Icons.notifications_sharp,
+              color: Colors.black,
+            ),
+            label: "Updates"),
       ],
     );
   }
