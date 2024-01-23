@@ -12,7 +12,7 @@ class HomePage extends StatelessWidget {
         title: const Text("Bottom Navigation Bar"),
         centerTitle: true,
       ),
-      body: ListView(children: [
+      body: ListView(children: const [
         Column(children: [
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 30),

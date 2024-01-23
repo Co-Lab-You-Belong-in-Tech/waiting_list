@@ -8,7 +8,8 @@ class SmallRedEclipse extends StatelessWidget {
     return Container(
       height: 4,
       width: 4,
-      decoration: BoxDecoration(color: Colors.red, shape: BoxShape.circle),
+      decoration:
+          const BoxDecoration(color: Colors.red, shape: BoxShape.circle),
     );
   }
 }

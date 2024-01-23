@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: 'nunito'),
       // home: HomePage(),
-      home: SelectedPage(),
+      home: const HomePage(),
       title: 'Speedy Bites',
       // theme: ThemeData(
       //   colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),

@@ -12,23 +12,23 @@ class Confirmation extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Icon(
+            const Icon(
               Icons.fire_truck_sharp,
               color: Colors.red,
             ),
-            SizedBox(
+            const SizedBox(
               height: 40,
             ),
-            Text(
+            const Text(
               "Congratulations! You're in line for Toasty Cheese Food Truck. ",
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
-            Text(
+            const Text(
                 "We'll notify you when it's your turn. Browse the menu, plan your order, and skip the line for a speedy experience! "),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             Container(
@@ -43,7 +43,7 @@ class Confirmation extends StatelessWidget {
                     color: Colors.white,
                     // width: 25,
                   )),
-              child: Center(
+              child: const Center(
                 child: Text(
                   "View Menu",
                   style: TextStyle(
@@ -51,7 +51,7 @@ class Confirmation extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 8,
             ),
             Container(
@@ -66,7 +66,7 @@ class Confirmation extends StatelessWidget {
                     color: Colors.black,
                     // width: 25,
                   )),
-              child: Center(
+              child: const Center(
                 child: Text(
                   "Leave Waitlist",
                   style: TextStyle(

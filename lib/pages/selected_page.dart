@@ -20,7 +20,7 @@ class _SelectedPageState extends State<SelectedPage> {
   // Size _size;
   @override
   Widget build(BuildContext context) {
-    Size _size = MediaQuery.of(context).size;
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -28,12 +28,13 @@ class _SelectedPageState extends State<SelectedPage> {
             Stack(
               children: [
                 Container(
-                  width: _size.width,
+                  width: size.width,
                   height: 230,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                       image: DecorationImage(
                           fit: BoxFit.cover,
-                          image: AssetImage("images/pizza.jpg"))),
+                          image: NetworkImage(
+                              "https://images.unsplash.com/photo-1619683815335-2b5b130a1baf?q=80&w=1776&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"))),
                 ),
                 Positioned(
                     right: 25,
@@ -41,14 +42,14 @@ class _SelectedPageState extends State<SelectedPage> {
                     child: Container(
                       height: 35,
                       width: 35,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                           color: Colors.white, shape: BoxShape.circle),
                     )),
                 Positioned(
                   right: 30,
                   top: 15,
                   child: Container(
-                    child: Icon(
+                    child: const Icon(
                       Icons.favorite_outline_rounded,
                       size: 25,
                       color: Colors.black,
@@ -61,14 +62,14 @@ class _SelectedPageState extends State<SelectedPage> {
                     child: Container(
                       height: 35,
                       width: 35,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                           color: Colors.white, shape: BoxShape.circle),
                     )),
                 Positioned(
                   right: 85,
                   top: 15,
                   child: Container(
-                    child: Icon(
+                    child: const Icon(
                       Icons.file_upload_outlined,
                       size: 25,
                       color: Colors.black,
@@ -81,14 +82,14 @@ class _SelectedPageState extends State<SelectedPage> {
                     child: Container(
                       height: 35,
                       width: 35,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                           color: Colors.white, shape: BoxShape.circle),
                     )),
                 Positioned(
                   left: 32,
                   top: 20,
                   child: Container(
-                    child: Icon(
+                    child: const Icon(
                       Icons.arrow_back_ios_rounded,
                       size: 17,
                       color: Colors.black,
@@ -102,9 +103,9 @@ class _SelectedPageState extends State<SelectedPage> {
                       height: 20,
                       width: 40,
                       decoration: BoxDecoration(
-                          color: Color(0xff454138),
+                          color: const Color(0xff454138),
                           borderRadius: BorderRadius.circular(3)),
-                      child: Text(
+                      child: const Text(
                         " 1/66",
                         style: TextStyle(
                             fontWeight: FontWeight.bold, color: Colors.white),
@@ -114,8 +115,8 @@ class _SelectedPageState extends State<SelectedPage> {
             ),
             ////////end of stack
             Container(
-              margin: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
-              child: Column(
+              margin: const EdgeInsets.symmetric(vertical: 20, horizontal: 10),
+              child: const Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
