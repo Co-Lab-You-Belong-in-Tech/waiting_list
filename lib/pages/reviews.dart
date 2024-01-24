@@ -107,6 +107,7 @@ class ReviewsTab extends StatelessWidget {
                         shape: BoxShape.circle,
                         image: DecorationImage(
                             fit: BoxFit.cover,
+
                             image: AssetImage("assets/images/jordyn.jpg"))),
                   ),
                   const SizedBox(
@@ -163,7 +164,9 @@ class ReviewsTab extends StatelessWidget {
                         shape: BoxShape.circle,
                         image: DecorationImage(
                             fit: BoxFit.cover,
+
                             image: AssetImage("assets/images/penelope.jpg"))),
+
                   ),
                   const SizedBox(
                     width: 15,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:waiting_list/pages/menu.dart';
 
 class Confirmation extends StatelessWidget {
   const Confirmation({super.key});
@@ -8,8 +9,10 @@ class Confirmation extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(),
       body: Padding(
-        padding: const EdgeInsets.all(50.0),
+        padding: const EdgeInsets.all(40.0),
         child: Column(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const Icon(
@@ -17,18 +20,23 @@ class Confirmation extends StatelessWidget {
               color: Colors.red,
             ),
             const SizedBox(
+
+
               height: 40,
             ),
             const Text(
               "Congratulations! You're in line for Toasty Cheese Food Truck. ",
               style: TextStyle(fontWeight: FontWeight.bold),
+              textAlign: TextAlign.center,
             ),
             const SizedBox(
               height: 10,
             ),
+
             const Text(
                 "We'll notify you when it's your turn. Browse the menu, plan your order, and skip the line for a speedy experience! "),
             const SizedBox(
+
               height: 30,
             ),
             Container(
@@ -54,23 +62,33 @@ class Confirmation extends StatelessWidget {
             const SizedBox(
               height: 8,
             ),
-            Container(
-              height: 34,
-              width: 278,
-              // padding: EdgeInsets.all(20),
-              // margin: EdgeInsets.symmetric(horizontal: 15),
-              decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(9),
-                  border: Border.all(
-                    color: Colors.black,
-                    // width: 25,
-                  )),
-              child: const Center(
-                child: Text(
-                  "Leave Waitlist",
-                  style: TextStyle(
-                      color: Colors.black, fontWeight: FontWeight.w100),
+
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => MenuTab()),
+                );
+              },
+              child: Container(
+                height: 34,
+                width: 278,
+                // padding: EdgeInsets.all(20),
+                // margin: EdgeInsets.symmetric(horizontal: 15),
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(9),
+                    border: Border.all(
+                      color: Colors.black,
+                      // width: 25,
+                    )),
+                child: Center(
+                  child: Text(
+                    "Leave Waitlist",
+                    style: TextStyle(
+                        color: Colors.black, fontWeight: FontWeight.w100),
+                  ),
+
                 ),
               ),
             ),

@@ -86,7 +86,7 @@ class _SelectedPageState extends State<SelectedPage> {
                           color: Colors.white, shape: BoxShape.circle),
                     )),
                 Positioned(
-                  left: 32,
+                  left: 33,
                   top: 20,
                   child: Container(
                     child: const Icon(

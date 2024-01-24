@@ -52,19 +52,51 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        items: const [
+        unselectedLabelStyle: TextStyle(
+          color: Colors.black,
+        ),
+        items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
+            icon: Image.asset(
+              "images/Truck.png",
+              color: Colors.black,
+            ),
+            label: "Home",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.search),
-            label: 'Search',
-          ),
+              icon: Image.asset(
+                "images/MagnifyingGlass.png",
+                color: Colors.black,
+              ),
+              label: "Search"),
           BottomNavigationBarItem(
-            icon: Icon(Icons.favorite),
-            label: 'favorites',
-          ),
+              icon: Image.asset(
+                "images/Heart.png",
+                color: Colors.black,
+              ),
+              label: "Favourites"),
+          BottomNavigationBarItem(
+              icon: Image.asset(
+                "images/Bell.png",
+                color: Colors.black,
+              ),
+              label: "Updates"),
+          // BottomNavigationBarItem(
+          //   icon: Image.asset("assets/images/User.png"),
+          //   label: 'Home',
+          // ),
+          // BottomNavigationBarItem(
+          //   icon: Icon(Icons.person_2_rounded),
+          //   label: 'Search',
+          // ),
+          // BottomNavigationBarItem(
+          //   icon: Icon(Icons.favorite),
+          //   label: 'Favorites',
+          // ),
+          // BottomNavigationBarItem(
+          //   icon: Icon(Icons.favorite),
+          //   label: 'Updates',
+          // ),
         ],
       ),
     );
@@ -469,9 +501,22 @@ class _HomePageState extends State<HomePage> {
               color: Colors.white,
               borderRadius: BorderRadius.circular(10),
             ),
-            child: const Icon(
-              Icons.access_time_rounded,
+            child: Stack(
+              children: [
+                ImageIcon(
+                  AssetImage("images/user_ellipse.png"),
+                  color: Color.fromARGB(255, 211, 21, 18),
+                ),
+                ImageIcon(
+                  AssetImage("assets/images/User.png"),
+                  color: Colors.white,
+                ),
+              ],
             ),
+            // child: const Icon(
+            //   // Icons.access_time_rounded,
+            //   Icons.access_time_rounded,
+            // ),
           ),
         ),
       ],
