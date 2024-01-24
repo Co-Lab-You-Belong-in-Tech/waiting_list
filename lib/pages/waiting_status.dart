@@ -12,7 +12,7 @@ class WaitingStatusTab extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
           Row(
@@ -21,16 +21,16 @@ class WaitingStatusTab extends StatelessWidget {
                 // padding: const EdgeInsets.symmetric(horizontal: 15),
                 height: 14,
                 width: 14,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     color: Color(0xff2BDA45), shape: BoxShape.circle),
               ),
-              Text(
+              const Text(
                 " Open now until 10 PM",
                 style: TextStyle(fontSize: 16),
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           const Text("Last Quoted Wait Time: 15 mins",
@@ -42,21 +42,21 @@ class WaitingStatusTab extends StatelessWidget {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => Confirmation()),
+                MaterialPageRoute(builder: (context) => const Confirmation()),
               );
             },
             child: Container(
               padding: const EdgeInsets.all(10),
               // margin: EdgeInsets.symmetric(horizontal: 15),
               decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 211, 21, 18),
+                  color: const Color.fromARGB(255, 211, 21, 18),
                   borderRadius: BorderRadius.circular(6),
                   border: Border.all(
                     color: Colors.white,
                     // width: 25,
                   )),
               child: const Center(
-                child: const Text(
+                child: Text(
                   "Join Waitlist",
                   style: TextStyle(
                       color: Colors.white,
@@ -66,7 +66,7 @@ class WaitingStatusTab extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
         ],

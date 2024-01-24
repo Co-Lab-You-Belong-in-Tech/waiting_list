@@ -18,8 +18,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: 'nunito'),
-      home: HomePage(),
-      // home: Confirmation(),
+
+      // home: HomePage(),
+      home: const HomePage(),
+
       title: 'Speedy Bites',
       // theme: ThemeData(
       //   colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),

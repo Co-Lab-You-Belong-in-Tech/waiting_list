@@ -10,25 +10,25 @@ class ReviewsTab extends StatelessWidget {
         (Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Icon(
+            const Icon(
               Icons.star_border_rounded,
               size: 27,
             ),
-            Text(
+            const Text(
               " 4.4  ",
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.w400),
             ),
             Container(
               height: 8,
               width: 8,
-              decoration:
-                  BoxDecoration(color: Colors.red, shape: BoxShape.circle),
+              decoration: const BoxDecoration(
+                  color: Colors.red, shape: BoxShape.circle),
             ),
-            Text("  410 reviews",
+            const Text("  410 reviews",
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.w400)),
           ],
         )),
-        SizedBox(
+        const SizedBox(
           height: 15,
         ),
         Card(
@@ -45,48 +45,48 @@ class ReviewsTab extends StatelessWidget {
                   Container(
                     height: 50,
                     width: 50,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                         shape: BoxShape.circle,
                         image: DecorationImage(
                             fit: BoxFit.cover,
-                            image: AssetImage("images/ryan.png"))),
+                            image: AssetImage("assets/images/ryan.png"))),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 15,
                   ),
-                  Column(
+                  const Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [Text("Ryan"), Text("2 years on SpeedyBite")],
                   )
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   for (int i = 0; i < 6; i++)
-                    Icon(
+                    const Icon(
                       Icons.star_border_rounded,
                       size: 13,
                     ),
-                  Text(
+                  const Text(
                     "  2 days ago",
                     style: TextStyle(fontWeight: FontWeight.w600),
                   )
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 5,
               ),
-              Text(
+              const Text(
                   "Very cheesy experience! This is a great place to enjoy a delicious sandwich.")
             ],
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 15,
         ),
         Card(
@@ -103,43 +103,44 @@ class ReviewsTab extends StatelessWidget {
                   Container(
                     height: 50,
                     width: 50,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                         shape: BoxShape.circle,
                         image: DecorationImage(
                             fit: BoxFit.cover,
-                            image: AssetImage("images/jordyn.jpg"))),
+
+                            image: AssetImage("assets/images/jordyn.jpg"))),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 15,
                   ),
-                  Column(
+                  const Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [Text("Jordyn"), Text("6  months on SpeedyBite")],
                   )
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   for (int i = 0; i < 6; i++)
-                    Icon(
+                    const Icon(
                       Icons.star_border_rounded,
                       size: 13,
                     ),
-                  Text(
+                  const Text(
                     "  1 week ago",
                     style: TextStyle(fontWeight: FontWeight.w600),
                   )
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 5,
               ),
-              Text(
+              const Text(
                   "Waitlist was a breeze, customer service was above and beyond and the food was very good. Highly recommend!"),
             ],
           ),
@@ -159,43 +160,45 @@ class ReviewsTab extends StatelessWidget {
                   Container(
                     height: 50,
                     width: 50,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                         shape: BoxShape.circle,
                         image: DecorationImage(
                             fit: BoxFit.cover,
-                            image: AssetImage("images/penelope.jpg"))),
+
+                            image: AssetImage("assets/images/penelope.jpg"))),
+
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 15,
                   ),
-                  Column(
+                  const Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [Text("Penelope"), Text("4 years on SpeedyBite")],
                   )
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   for (int i = 0; i < 6; i++)
-                    Icon(
+                    const Icon(
                       Icons.star_border_rounded,
                       size: 13,
                     ),
-                  Text(
+                  const Text(
                     "  3 weeks ago",
                     style: TextStyle(fontWeight: FontWeight.w600),
                   )
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 5,
               ),
-              Text(
+              const Text(
                   "I love this place. I come here at least once every two weeks and I will never get tired of it."),
             ],
           ),
@@ -205,14 +208,14 @@ class ReviewsTab extends StatelessWidget {
           padding: const EdgeInsets.all(10),
           // margin: EdgeInsets.symmetric(horizontal: 25),
           decoration: BoxDecoration(
-              color: Color.fromARGB(255, 211, 21, 18),
+              color: const Color.fromARGB(255, 211, 21, 18),
               borderRadius: BorderRadius.circular(6),
               border: Border.all(
                 color: Colors.white,
                 // width: 25,
               )),
           child: const Center(
-            child: const Text(
+            child: Text(
               "See All Reviews",
               style: TextStyle(
                   color: Colors.white,

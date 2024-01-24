@@ -5,7 +5,7 @@ import 'package:waiting_list/models/foodtruck_model.dart';
 import 'package:waiting_list/pages/explore_near.dart';
 
 class HomePage extends StatefulWidget {
-  HomePage({super.key});
+  const HomePage({super.key});
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -111,7 +111,10 @@ class _HomePageState extends State<HomePage> {
           child: Text(
             'Featured Food Trucks',
             style: TextStyle(
-                color: Colors.black, fontSize: 18, fontWeight: FontWeight.bold),
+                fontFamily: 'Nunito',
+                color: Colors.black,
+                fontSize: 18,
+                fontWeight: FontWeight.bold),
           ),
           // OutlinedButton void (onPressed: () {}, child: Text('Click Here'),)
         ),
@@ -134,6 +137,11 @@ class _HomePageState extends State<HomePage> {
                   children: [
                     Image(
                       image: NetworkImage(feats[index].imagePath),
+                      loadingBuilder: (context, child, loadingProgress) {
+                        return loadingProgress == null
+                            ? child
+                            : const LinearProgressIndicator();
+                      },
                       height: 188,
                       width: 278,
                       fit: BoxFit.cover,
@@ -141,39 +149,63 @@ class _HomePageState extends State<HomePage> {
                     // const Icon(Icons.ac_unit_sharp),
                     Column(
                       children: [
-                        Text(
-                          feats[index].name,
-                          style: const TextStyle(
-                            fontSize: 16,
-                            color: Colors.black,
-                            fontWeight: FontWeight.w500,
+                        Align(
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            feats[index].name,
+                            style: const TextStyle(
+                              fontFamily: 'Nunito',
+                              fontSize: 16,
+                              color: Colors.black,
+                              fontWeight: FontWeight.w500,
+                            ),
                           ),
                         ),
+                        const Align(
+                            alignment: Alignment.topRight,
+                            child: Icon(
+                              Icons.favorite_border,
+                              size: 10,
+                            )),
                       ],
                     ),
-                    Text(
-                      '${feats[index].price} | ${feats[index].cusine} | ${feats[index].rating}',
-                      style: const TextStyle(
-                          color: Color.fromARGB(255, 8, 8, 8),
-                          fontSize: 14,
-                          fontWeight: FontWeight.w400),
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        '${feats[index].price} | ${feats[index].cusine} | ${feats[index].rating}',
+                        style: const TextStyle(
+                            fontFamily: 'Nunito',
+                            color: Color.fromARGB(255, 8, 8, 8),
+                            fontSize: 14,
+                            fontWeight: FontWeight.w400),
+                      ),
                     ),
-                    Container(
-                      height: 34,
-                      width: 278,
-                      decoration: BoxDecoration(
-                          gradient: const LinearGradient(colors: [
-                            Color.fromARGB(255, 219, 29, 29),
-                            Color.fromARGB(255, 219, 29, 29),
-                          ]),
-                          borderRadius: BorderRadius.circular(10)),
-                      child: const Center(
-                        child: Text(
-                          'Join Waitlist',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.w600,
-                              fontSize: 14),
+                    Align(
+                      alignment: Alignment.bottomRight,
+                      child: Text(feats[index].distance),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(
+                        bottom: 15,
+                      ),
+                      child: Container(
+                        height: 34,
+                        width: 278,
+                        decoration: BoxDecoration(
+                            gradient: const LinearGradient(colors: [
+                              Color.fromARGB(255, 219, 29, 29),
+                              Color.fromARGB(255, 219, 29, 29),
+                            ]),
+                            borderRadius: BorderRadius.circular(10)),
+                        child: const Center(
+                          child: Text(
+                            'Join Waitlist',
+                            style: TextStyle(
+                                fontFamily: 'Nunito',
+                                color: Colors.white,
+                                fontWeight: FontWeight.w600,
+                                fontSize: 14),
+                          ),
                         ),
                       ),
                     )
@@ -202,7 +234,10 @@ class _HomePageState extends State<HomePage> {
           child: Text(
             'Recommended For You',
             style: TextStyle(
-                color: Colors.black, fontSize: 18, fontWeight: FontWeight.bold),
+                fontFamily: 'Nunito',
+                color: Colors.black,
+                fontSize: 18,
+                fontWeight: FontWeight.bold),
           ),
         ),
         const SizedBox(
@@ -224,6 +259,11 @@ class _HomePageState extends State<HomePage> {
                   children: [
                     Image(
                       image: NetworkImage(foodTrucks[index].imagePath),
+                      loadingBuilder: (context, child, loadingProgress) {
+                        return loadingProgress == null
+                            ? child
+                            : const LinearProgressIndicator();
+                      },
                       height: 188,
                       width: 278,
                       fit: BoxFit.cover,
@@ -231,39 +271,56 @@ class _HomePageState extends State<HomePage> {
                     // const Icon(Icons.ac_unit_sharp),
                     Column(
                       children: [
-                        Text(
-                          foodTrucks[index].name,
-                          style: const TextStyle(
-                            fontSize: 16,
-                            color: Colors.black,
-                            fontWeight: FontWeight.w500,
+                        Align(
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            foodTrucks[index].name,
+                            style: const TextStyle(
+                              fontSize: 16,
+                              color: Colors.black,
+                              fontWeight: FontWeight.w500,
+                              fontFamily: 'Nunito',
+                            ),
                           ),
                         ),
+                        const Align(
+                            alignment: Alignment.topRight,
+                            child: Icon(Icons.favorite_border)),
                       ],
                     ),
-                    Text(
-                      '${foodTrucks[index].price} | ${foodTrucks[index].cusine} | ${foodTrucks[index].rating}',
-                      style: const TextStyle(
-                          color: Color.fromARGB(255, 8, 8, 8),
-                          fontSize: 13,
-                          fontWeight: FontWeight.w400),
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        '${foodTrucks[index].price} | ${foodTrucks[index].cusine} | ${foodTrucks[index].rating}',
+                        style: const TextStyle(
+                            fontFamily: 'Nunito',
+                            color: Color.fromARGB(255, 8, 8, 8),
+                            fontSize: 13,
+                            fontWeight: FontWeight.w400),
+                      ),
                     ),
-                    Container(
-                      height: 34,
-                      width: 278,
-                      decoration: BoxDecoration(
-                          gradient: const LinearGradient(colors: [
-                            Color.fromARGB(255, 219, 29, 29),
-                            Color.fromARGB(255, 219, 29, 29),
-                          ]),
-                          borderRadius: BorderRadius.circular(10)),
-                      child: const Center(
-                        child: Text(
-                          'Join Waitlist',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.w600,
-                              fontSize: 14),
+                    Padding(
+                      padding: const EdgeInsets.only(
+                        bottom: 15,
+                      ),
+                      child: Container(
+                        height: 34,
+                        width: 278,
+                        decoration: BoxDecoration(
+                            gradient: const LinearGradient(colors: [
+                              Color.fromARGB(255, 219, 29, 29),
+                              Color.fromARGB(255, 219, 29, 29),
+                            ]),
+                            borderRadius: BorderRadius.circular(10)),
+                        child: const Center(
+                          child: Text(
+                            'Join Waitlist',
+                            style: TextStyle(
+                                fontFamily: 'Nunito',
+                                color: Colors.white,
+                                fontWeight: FontWeight.w600,
+                                fontSize: 14),
+                          ),
                         ),
                       ),
                     )
@@ -301,15 +358,18 @@ class _HomePageState extends State<HomePage> {
           child: Text(
             'Food Trucks Near You',
             style: TextStyle(
-                color: Colors.black, fontSize: 18, fontWeight: FontWeight.bold),
+                fontFamily: 'Nunito',
+                color: Colors.black,
+                fontSize: 18,
+                fontWeight: FontWeight.bold),
           ),
         ),
         const SizedBox(
-          height: 15,
+          height: 5,
         ),
         SizedBox(
           // color: Colors.blue,
-          height: 420,
+          height: 350,
           child: ListView.separated(
             itemBuilder: (context, index) {
               return Container(
@@ -323,6 +383,11 @@ class _HomePageState extends State<HomePage> {
                   children: [
                     Image(
                       image: NetworkImage(trucks[index].imagePath),
+                      loadingBuilder: (context, child, loadingProgress) {
+                        return loadingProgress == null
+                            ? child
+                            : const LinearProgressIndicator();
+                      },
                       height: 188,
                       width: 278,
                       fit: BoxFit.cover,
@@ -330,39 +395,55 @@ class _HomePageState extends State<HomePage> {
                     // const Icon(Icons.ac_unit_sharp),
                     Column(
                       children: [
-                        Text(
-                          trucks[index].name,
-                          style: const TextStyle(
-                            fontSize: 16,
-                            color: Colors.black,
-                            fontWeight: FontWeight.w500,
+                        Align(
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            trucks[index].name,
+                            style: const TextStyle(
+                              fontFamily: 'Nunito',
+                              fontSize: 16,
+                              color: Colors.black,
+                              fontWeight: FontWeight.w500,
+                            ),
                           ),
                         ),
+                        const Align(
+                            alignment: Alignment.topRight,
+                            child: Icon(Icons.favorite_border)),
                       ],
                     ),
-                    Text(
-                      '${trucks[index].price} | ${trucks[index].cusine} | ${trucks[index].rating}',
-                      style: const TextStyle(
-                          color: Color.fromARGB(255, 8, 8, 8),
-                          fontSize: 13,
-                          fontWeight: FontWeight.w400),
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        '${trucks[index].price} * ${trucks[index].cusine} * ${trucks[index].rating}',
+                        style: const TextStyle(
+                            fontFamily: 'Nunito',
+                            color: Color.fromARGB(255, 8, 8, 8),
+                            fontSize: 13,
+                            fontWeight: FontWeight.w400),
+                      ),
                     ),
-                    Container(
-                      height: 34,
-                      width: 278,
-                      decoration: BoxDecoration(
-                          gradient: const LinearGradient(colors: [
-                            Color.fromARGB(255, 219, 29, 29),
-                            Color.fromARGB(255, 219, 29, 29),
-                          ]),
-                          borderRadius: BorderRadius.circular(10)),
-                      child: const Center(
-                        child: Text(
-                          'Join Waitlist',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.w600,
-                              fontSize: 14),
+                    Padding(
+                      padding: const EdgeInsets.only(
+                        bottom: 15,
+                      ),
+                      child: Container(
+                        height: 34,
+                        width: 278,
+                        decoration: BoxDecoration(
+                            gradient: const LinearGradient(colors: [
+                              Color.fromARGB(255, 219, 29, 29),
+                              Color.fromARGB(255, 219, 29, 29),
+                            ]),
+                            borderRadius: BorderRadius.circular(10)),
+                        child: const Center(
+                          child: Text(
+                            'Join Waitlist',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.w600,
+                                fontSize: 14),
+                          ),
                         ),
                       ),
                     )

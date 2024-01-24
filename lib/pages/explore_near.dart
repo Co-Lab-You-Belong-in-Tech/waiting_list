@@ -73,6 +73,11 @@ class exploreNear extends StatelessWidget {
                   children: [
                     Image(
                       image: NetworkImage(trucks[index].imagePath),
+                      loadingBuilder: (context, child, loadingProgress) {
+                        return loadingProgress == null
+                            ? child
+                            : const LinearProgressIndicator();
+                      },
                       height: 320,
                       width: 358,
                       fit: BoxFit.cover,
@@ -80,23 +85,35 @@ class exploreNear extends StatelessWidget {
                     // const Icon(Icons.ac_unit_sharp),
                     Column(
                       children: [
-                        Text(
-                          trucks[index].name,
-                          style: const TextStyle(
-                            fontSize: 16,
-                            color: Colors.black,
-                            fontWeight: FontWeight.w500,
+                        Align(
+                          alignment: Alignment.topLeft,
+                          child: Text(
+                            trucks[index].name,
+                            style: const TextStyle(
+                              fontSize: 16,
+                              color: Colors.black,
+                              fontWeight: FontWeight.w500,
+                            ),
                           ),
                         ),
+                        const Align(
+                            alignment: Alignment.topRight,
+                            child: Icon(Icons.favorite_border)),
                       ],
                     ),
-                    Text(
-                      '${trucks[index].price} | ${trucks[index].cusine} | ${trucks[index].rating}',
-                      style: const TextStyle(
-                          color: Color.fromARGB(255, 8, 8, 8),
-                          fontSize: 13,
-                          fontWeight: FontWeight.w400),
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        '${trucks[index].price} | ${trucks[index].cusine} | ${trucks[index].rating}',
+                        style: const TextStyle(
+                            color: Color.fromARGB(255, 8, 8, 8),
+                            fontSize: 13,
+                            fontWeight: FontWeight.w400),
+                      ),
                     ),
+                    const Align(
+                        alignment: Alignment.bottomRight,
+                        child: Icon(Icons.navigation_outlined)),
                     GestureDetector(
                       onTap: () {
                         Navigator.push(

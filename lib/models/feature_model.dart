@@ -4,6 +4,7 @@ class FeatModel {
   String price;
   String cusine;
   String rating;
+  String distance;
   bool viewIsSelected;
 
   FeatModel({
@@ -12,6 +13,7 @@ class FeatModel {
     required this.price,
     required this.cusine,
     required this.rating,
+    required this.distance,
     required this.viewIsSelected,
   });
 
@@ -26,6 +28,7 @@ class FeatModel {
           price: 'easy',
           cusine: 'Desserts',
           rating: '4.1',
+          distance: '2.2 Mi',
           viewIsSelected: false),
     );
 
@@ -36,6 +39,7 @@ class FeatModel {
               'https://images.unsplash.com/photo-1514996183542-72c207fee1e3?q=80&w=1885&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
           price: 'easy',
           cusine: 'American',
+          distance: '2.2 Mi',
           rating: '4.7',
           viewIsSelected: false),
     );
@@ -46,6 +50,7 @@ class FeatModel {
               'https://images.unsplash.com/photo-1576595879571-5402d294c407?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
           price: 'easy',
           cusine: 'Desserts',
+          distance: '2.2 Mi',
           rating: '4.5',
           viewIsSelected: false),
     );
@@ -56,6 +61,7 @@ class FeatModel {
               'https://images.unsplash.com/photo-1606066889831-35faf6fa6ff6?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
           price: 'easy',
           cusine: 'American',
+          distance: '2.2 Mi',
           rating: '4.9',
           viewIsSelected: false),
     );

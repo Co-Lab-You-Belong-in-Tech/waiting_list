@@ -32,7 +32,7 @@ class _TabtilesState extends State<Tabtiles> with TickerProviderStateMixin {
             labelColor: Colors.red,
             indicatorWeight: 3,
             indicatorColor: Colors.red,
-            tabs: [
+            tabs: const [
               Tab(
                   child: Text(
                 "Waiting Status",
@@ -47,7 +47,7 @@ class _TabtilesState extends State<Tabtiles> with TickerProviderStateMixin {
       Container(
         child: TabBarView(
           controller: tabController,
-          children: [
+          children: const [
             WaitingStatusTab(),
             MenuTab(),
             ReviewsTab(),
