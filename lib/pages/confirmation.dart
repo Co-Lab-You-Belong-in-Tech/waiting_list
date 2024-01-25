@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:waiting_list/pages/menu.dart';
 
+import 'home.dart';
+
 class Confirmation extends StatelessWidget {
   const Confirmation({super.key});
 
@@ -15,28 +17,34 @@ class Confirmation extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const Icon(
-              Icons.fire_truck_sharp,
-              color: Colors.red,
+            ImageIcon(
+              AssetImage("images/truck.png"),
+              color: Color.fromARGB(255, 211, 21, 18),
             ),
-            const SizedBox(
-
-
+            //   icon:
+            //     Image.asset("image/truck.png"),
+            //     color: Colors.red,
+            // ],
+            // Icon(
+            //   Icons.fire_truck_sharp,
+            //   color: Colors.red,
+            // ),
+            SizedBox(
               height: 40,
             ),
-            const Text(
+            Text(
               "Congratulations! You're in line for Toasty Cheese Food Truck. ",
               style: TextStyle(fontWeight: FontWeight.bold),
               textAlign: TextAlign.center,
             ),
-            const SizedBox(
+            SizedBox(
               height: 10,
             ),
-
-            const Text(
-                "We'll notify you when it's your turn. Browse the menu, plan your order, and skip the line for a speedy experience! "),
-            const SizedBox(
-
+            Text(
+              "We'll notify you when it's your turn. Browse the menu, plan your order, and skip the line for a speedy experience! ",
+              textAlign: TextAlign.center,
+            ),
+            SizedBox(
               height: 30,
             ),
             Container(
@@ -51,7 +59,7 @@ class Confirmation extends StatelessWidget {
                     color: Colors.white,
                     // width: 25,
                   )),
-              child: const Center(
+              child: Center(
                 child: Text(
                   "View Menu",
                   style: TextStyle(
@@ -59,15 +67,14 @@ class Confirmation extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(
+            SizedBox(
               height: 8,
             ),
-
             GestureDetector(
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => MenuTab()),
+                  MaterialPageRoute(builder: (context) => HomePage()),
                 );
               },
               child: Container(
@@ -88,7 +95,6 @@ class Confirmation extends StatelessWidget {
                     style: TextStyle(
                         color: Colors.black, fontWeight: FontWeight.w100),
                   ),
-
                 ),
               ),
             ),

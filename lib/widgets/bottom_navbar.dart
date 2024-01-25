@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:waiting_list/pages/home_page.dart';
+// import 'package:waiting_list/pages/home_page.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({super.key});
@@ -10,7 +10,7 @@ class BottomNavBar extends StatefulWidget {
 
 class _BottomNavBarState extends State<BottomNavBar> {
   int _selectedIndex = 0;
-  void navigateBottomBar(int index) {
+  void _NavigateBottomBar(int index) {
     setState(() {
       _selectedIndex = index;
     });
@@ -24,11 +24,9 @@ class _BottomNavBarState extends State<BottomNavBar> {
   Widget build(BuildContext context) {
     return BottomNavigationBar(
       currentIndex: _selectedIndex,
-      onTap: navigateBottomBar,
+      onTap: _NavigateBottomBar,
       type: BottomNavigationBarType.fixed,
-
       items: [
-
         BottomNavigationBarItem(
             icon: Icon(
               Icons.home,
