@@ -8,22 +8,22 @@ class ItemsWidget extends StatelessWidget {
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Padding(
-        padding: EdgeInsets.symmetric(vertical: 15, horizontal: 5),
+        padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 5),
         child: Row(children: [
           //single item
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 7),
+            padding: const EdgeInsets.symmetric(horizontal: 7),
             child: Container(
               width: 260,
               height: 320,
               decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(10),
-                  boxShadow: [BoxShadow(color: Colors.grey)]),
+                  boxShadow: const [BoxShadow(color: Colors.grey)]),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  const Text(
                     "Food Trucks Near You",
                     style: TextStyle(fontSize: 16),
                   ),
@@ -37,15 +37,15 @@ class ItemsWidget extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text("Don Tacos"),
+                      const Text("Don Tacos"),
                       for (int i = 0; i < 5; i++)
-                        Icon(
+                        const Icon(
                           Icons.favorite_border_outlined,
                           size: 16,
                         ),
                     ],
                   ),
-                  Row(
+                  const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text("\$ 10"),
@@ -64,7 +64,7 @@ class ItemsWidget extends StatelessWidget {
                       Text("1.2 mi")
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 8,
                   ),
                   Container(
@@ -79,7 +79,7 @@ class ItemsWidget extends StatelessWidget {
                           color: Colors.white,
                           // width: 25,
                         )),
-                    child: Center(
+                    child: const Center(
                       child: Text(
                         "Join Waitlist",
                         style: TextStyle(

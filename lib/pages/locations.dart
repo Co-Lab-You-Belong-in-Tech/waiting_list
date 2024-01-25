@@ -94,16 +94,16 @@ class LocationsTab extends StatelessWidget {
             padding: const EdgeInsets.all(10),
             // margin: EdgeInsets.symmetric(horizontal: 25),
             decoration: BoxDecoration(
-                color: Color.fromARGB(255, 211, 21, 18),
+                color: const Color.fromARGB(255, 211, 21, 18),
                 borderRadius: BorderRadius.circular(9),
                 border: Border.all(
                   color: Colors.white,
                   // width: 25,
                 )),
             child: const Center(
-              child: const Text(
+              child: Text(
                 "Get Location Notifications",
-                style: const TextStyle(
+                style: TextStyle(
                     color: Colors.white,
                     // fontWeight: FontWeight.w700,
                     fontSize: 14),

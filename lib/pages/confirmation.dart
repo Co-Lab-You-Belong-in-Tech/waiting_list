@@ -15,34 +15,28 @@ class Confirmation extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            ImageIcon(
-              AssetImage("images/truck.png"),
-              color: Color.fromARGB(255, 211, 21, 18),
+            const Icon(
+              Icons.fire_truck_sharp,
+              color: Colors.red,
             ),
-            //   icon:
-            //     Image.asset("image/truck.png"),
-            //     color: Colors.red,
-            // ],
-            // Icon(
-            //   Icons.fire_truck_sharp,
-            //   color: Colors.red,
-            // ),
-            SizedBox(
+            const SizedBox(
+
+
               height: 40,
             ),
-            Text(
+            const Text(
               "Congratulations! You're in line for Toasty Cheese Food Truck. ",
               style: TextStyle(fontWeight: FontWeight.bold),
               textAlign: TextAlign.center,
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
-            Text(
-              "We'll notify you when it's your turn. Browse the menu, plan your order, and skip the line for a speedy experience! ",
-              textAlign: TextAlign.center,
-            ),
-            SizedBox(
+
+            const Text(
+                "We'll notify you when it's your turn. Browse the menu, plan your order, and skip the line for a speedy experience! "),
+            const SizedBox(
+
               height: 30,
             ),
             Container(
@@ -57,7 +51,7 @@ class Confirmation extends StatelessWidget {
                     color: Colors.white,
                     // width: 25,
                   )),
-              child: Center(
+              child: const Center(
                 child: Text(
                   "View Menu",
                   style: TextStyle(
@@ -65,9 +59,10 @@ class Confirmation extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 8,
             ),
+
             GestureDetector(
               onTap: () {
                 Navigator.push(
@@ -93,6 +88,7 @@ class Confirmation extends StatelessWidget {
                     style: TextStyle(
                         color: Colors.black, fontWeight: FontWeight.w100),
                   ),
+
                 ),
               ),
             ),
