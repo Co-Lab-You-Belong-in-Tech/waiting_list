@@ -12,21 +12,23 @@ class Tabtiles extends StatefulWidget {
 }
 
 class _TabtilesState extends State<Tabtiles> with TickerProviderStateMixin {
-  late TabController tabController;
-  @override
-  void initState() {
-    super.initState();
-    tabController = TabController(length: 4, vsync: this);
-  }
+  // late TabController tabController;
+  // @override
+  // void initState() {
+  // super.initState();
+  // tabController = TabController(length: 4, vsync: this);
+  // }
 
-  @override
+  // @override
   @override
   Widget build(BuildContext context) {
+    TabController _tabController = TabController(length: 4, vsync: this);
+
     return Column(children: [
       Container(
         child: TabBar(
             tabAlignment: TabAlignment.fill,
-            controller: tabController,
+            controller: _tabController,
             indicatorSize: TabBarIndicatorSize.label,
             isScrollable: true,
             labelColor: Colors.red,
@@ -46,12 +48,16 @@ class _TabtilesState extends State<Tabtiles> with TickerProviderStateMixin {
       ),
       Container(
         child: TabBarView(
-          controller: tabController,
+          controller: _tabController,
           children: [
-            WaitingStatusTab(),
-            MenuTab(),
-            ReviewsTab(),
-            LocationsTab(),
+            Text("1"),
+            Text("12"),
+            Text("13"),
+            Text("14"),
+            // WaitingStatusTab(),
+            // MenuTab(),
+            // ReviewsTab(),
+            // LocationsTab(),
           ],
         ),
       )

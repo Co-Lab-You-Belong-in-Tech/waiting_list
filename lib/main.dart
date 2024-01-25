@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: 'nunito'),
-      home: HomePage(),
+      home: SelectedPage(),
       // home: Confirmation(),
       title: 'Speedy Bites',
       // theme: ThemeData(
