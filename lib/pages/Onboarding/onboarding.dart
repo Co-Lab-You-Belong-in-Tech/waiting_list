@@ -8,7 +8,18 @@ class Onboarding extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        // title:
+        leading: GestureDetector(
+          child: const Icon(
+            Icons.arrow_back_ios_new,
+            color: Colors.black,
+          ),
+          onTap: () {
+            Navigator.pop(context);
+          },
+        ),
+      ),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(35.0),
@@ -46,7 +57,7 @@ class Onboarding extends StatelessWidget {
                       // image: NetworkImage("https://files.fm/f/g7apyukmfh")),
                     )),
                 const SizedBox(
-                  height: 40,
+                  height: 60,
                 ),
                 const SizedBox(
                   width: 332,

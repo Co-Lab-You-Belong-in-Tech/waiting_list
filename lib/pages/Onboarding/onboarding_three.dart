@@ -7,7 +7,18 @@ class OnboardingThree extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        // title:
+        leading: GestureDetector(
+          child: const Icon(
+            Icons.arrow_back_ios_new,
+            color: Colors.black,
+          ),
+          onTap: () {
+            Navigator.pop(context);
+          },
+        ),
+      ),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(35.0),
@@ -15,7 +26,7 @@ class OnboardingThree extends StatelessWidget {
             child: Column(
               children: [
                 const SizedBox(
-                  height: 70,
+                  height: 50,
                 ),
                 const SizedBox(
                   width: 319,
@@ -33,7 +44,7 @@ class OnboardingThree extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(
-                  height: 30,
+                  height: 50,
                 ),
                 Container(
                     width: 319,
@@ -44,10 +55,11 @@ class OnboardingThree extends StatelessWidget {
                           image: AssetImage("images/onb3.jpg")),
                     )),
                 const SizedBox(
-                  height: 40,
+                  height: 60,
                 ),
                 const SizedBox(
-                  width: 332,
+                  width: 320,
+                  // height: 350,
                   child: Text(
                     'Savor delicious bites, explore menus, and share your experiences through reviews.',
                     textAlign: TextAlign.center,
@@ -56,7 +68,7 @@ class OnboardingThree extends StatelessWidget {
                       fontSize: 18,
                       fontFamily: 'Nunito',
                       fontWeight: FontWeight.w700,
-                      height: 0,
+                      // height: 15,
                     ),
                   ),
                 ),
@@ -81,7 +93,7 @@ class OnboardingThree extends StatelessWidget {
                       width: 10,
                       height: 10,
                       decoration: const ShapeDecoration(
-                        color: Color(0xFFDA1F2B),
+                        color: Color(0xFFD9D9D9),
                         shape: OvalBorder(),
                       ),
                     ),
@@ -92,110 +104,57 @@ class OnboardingThree extends StatelessWidget {
                       width: 10,
                       height: 10,
                       decoration: const ShapeDecoration(
-                        color: Color(0xFFD9D9D9),
+                        color: Color(0xFFDA1F2B),
                         shape: OvalBorder(),
                       ),
-                    )
+                    ),
                   ],
                 ),
                 const SizedBox(
-                  height: 70,
+                  height: 60,
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const Login()),
-                        );
-                      },
-                      child: SizedBox(
-                        width: 101,
-                        height: 50,
-                        child: Stack(
-                          children: [
-                            Positioned(
-                              left: 0,
-                              top: 0,
-                              child: Container(
-                                width: 101,
-                                height: 50,
-                                decoration: ShapeDecoration(
-                                  color: Colors.white,
-                                  shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(6)),
-                                ),
-                              ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const Login()),
+                    );
+                  },
+                  child: SizedBox(
+                    width: 320,
+                    height: 50,
+                    child: Stack(
+                      children: [
+                        Positioned(
+                          left: 0,
+                          top: 0,
+                          child: Container(
+                            width: 320,
+                            height: 50,
+                            decoration: ShapeDecoration(
+                              color: const Color(0xFFDA1F2B),
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(6)),
                             ),
-                            const Positioned(
-                              left: 29,
-                              top: 14,
-                              child: Text(
-                                'SKIP',
-                                style: TextStyle(
-                                  color: Color(0xFFDA1F2B),
-                                  fontSize: 16,
-                                  fontFamily: 'Nunito',
-                                  fontWeight: FontWeight.w700,
-                                  height: 0,
-                                  letterSpacing: 0.50,
-                                ),
-                              ),
-                            ),
-                          ],
+                          ),
                         ),
-                      ),
+                        const Center(
+                          child: Text(
+                            'GET STARTED',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 16,
+                              fontFamily: 'Nunito',
+                              fontWeight: FontWeight.w700,
+                              height: 0,
+                              letterSpacing: 0.50,
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => OnboardingThree()),
-                        );
-                      },
-                      child: SizedBox(
-                        width: 101,
-                        height: 50,
-                        child: Stack(
-                          children: [
-                            Positioned(
-                              left: 0,
-                              top: 0,
-                              child: Container(
-                                width: 101,
-                                height: 50,
-                                decoration: ShapeDecoration(
-                                  color: const Color(0xFFDA1F2B),
-                                  shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(6)),
-                                ),
-                              ),
-                            ),
-                            const Positioned(
-                              left: 29,
-                              top: 14,
-                              child: Text(
-                                'NEXT',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 16,
-                                  fontFamily: 'Nunito',
-                                  fontWeight: FontWeight.w700,
-                                  height: 0,
-                                  letterSpacing: 0.50,
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    )
-                  ],
-                ),
+                  ),
+                )
               ],
             ),
           ),
