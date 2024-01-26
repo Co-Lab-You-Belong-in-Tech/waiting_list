@@ -52,9 +52,6 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        unselectedLabelStyle: TextStyle(
-          color: Colors.black,
-        ),
         items: [
           BottomNavigationBarItem(
             icon: Image.asset(
@@ -66,6 +63,7 @@ class _HomePageState extends State<HomePage> {
           BottomNavigationBarItem(
               icon: Image.asset(
                 "images/MagnifyingGlass.png",
+                // "images/Truck.png",
                 color: Colors.black,
               ),
               label: "Search"),
@@ -508,7 +506,7 @@ class _HomePageState extends State<HomePage> {
                   color: Color.fromARGB(255, 211, 21, 18),
                 ),
                 ImageIcon(
-                  AssetImage("assets/images/User.png"),
+                  AssetImage("/images/User.png"),
                   color: Colors.white,
                 ),
               ],

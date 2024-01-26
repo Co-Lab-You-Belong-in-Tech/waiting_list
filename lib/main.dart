@@ -3,6 +3,7 @@ import 'package:waiting_list/pages/home.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:waiting_list/pages/selected_page.dart';
 
+import 'pages/Onboarding/onboarding.dart';
 import 'pages/confirmation.dart';
 // import 'package:waiting_list/pages/login.dart';
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: 'nunito'),
-      home: SelectedPage(),
+      home: const Onboarding(),
       // home: Confirmation(),
       title: 'Speedy Bites',
       // theme: ThemeData(
