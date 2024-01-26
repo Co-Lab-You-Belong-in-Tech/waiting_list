@@ -1,6 +1,6 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
+import 'package:waiting_list/pages/Onboarding/onboarding_two.dart';
+import 'package:waiting_list/pages/login.dart';
 
 class Onboarding extends StatelessWidget {
   const Onboarding({super.key});
@@ -26,7 +26,7 @@ class Onboarding extends StatelessWidget {
                     style: TextStyle(
                       color: Colors.black,
                       fontSize: 24,
-                      fontFamily: 'Nunito-light',
+                      fontFamily: 'Nunito',
                       fontWeight: FontWeight.w800,
                       height: 0,
                       letterSpacing: 1.00,
@@ -106,76 +106,93 @@ class Onboarding extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Container(
-                      width: 101,
-                      height: 50,
-                      child: Stack(
-                        children: [
-                          Positioned(
-                            left: 0,
-                            top: 0,
-                            child: Container(
-                              width: 101,
-                              height: 50,
-                              decoration: ShapeDecoration(
-                                color: Colors.white,
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(6)),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Login()),
+                        );
+                      },
+                      child: Container(
+                        width: 101,
+                        height: 50,
+                        child: Stack(
+                          children: [
+                            Positioned(
+                              left: 0,
+                              top: 0,
+                              child: Container(
+                                width: 101,
+                                height: 50,
+                                decoration: ShapeDecoration(
+                                  color: Colors.white,
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(6)),
+                                ),
                               ),
                             ),
-                          ),
-                          Positioned(
-                            left: 29,
-                            top: 14,
-                            child: Text(
-                              'SKIP',
-                              style: TextStyle(
-                                color: Color(0xFFDA1F2B),
-                                fontSize: 16,
-                                fontFamily: 'Nunito',
-                                fontWeight: FontWeight.w700,
-                                height: 0,
-                                letterSpacing: 0.50,
+                            Positioned(
+                              left: 29,
+                              top: 14,
+                              child: Text(
+                                'SKIP',
+                                style: TextStyle(
+                                  color: Color(0xFFDA1F2B),
+                                  fontSize: 16,
+                                  fontFamily: 'Nunito',
+                                  fontWeight: FontWeight.w700,
+                                  height: 0,
+                                  letterSpacing: 0.50,
+                                ),
                               ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
-                    Container(
-                      width: 101,
-                      height: 50,
-                      child: Stack(
-                        children: [
-                          Positioned(
-                            left: 0,
-                            top: 0,
-                            child: Container(
-                              width: 101,
-                              height: 50,
-                              decoration: ShapeDecoration(
-                                color: Color(0xFFDA1F2B),
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(6)),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => OnboardingTwo()),
+                        );
+                      },
+                      child: Container(
+                        width: 101,
+                        height: 50,
+                        child: Stack(
+                          children: [
+                            Positioned(
+                              left: 0,
+                              top: 0,
+                              child: Container(
+                                width: 101,
+                                height: 50,
+                                decoration: ShapeDecoration(
+                                  color: Color(0xFFDA1F2B),
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(6)),
+                                ),
                               ),
                             ),
-                          ),
-                          Positioned(
-                            left: 29,
-                            top: 14,
-                            child: Text(
-                              'NEXT',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 16,
-                                fontFamily: 'Nunito',
-                                fontWeight: FontWeight.w700,
-                                height: 0,
-                                letterSpacing: 0.50,
+                            Positioned(
+                              left: 29,
+                              top: 14,
+                              child: Text(
+                                'NEXT',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 16,
+                                  fontFamily: 'Nunito',
+                                  fontWeight: FontWeight.w700,
+                                  height: 0,
+                                  letterSpacing: 0.50,
+                                ),
                               ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     )
                   ],
